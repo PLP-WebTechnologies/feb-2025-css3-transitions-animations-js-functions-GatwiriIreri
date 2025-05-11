@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Task Manager</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Animated Setting Pannel</h1>
+            <div class="card">
+                <div class="settings-section">
+                    <h2>Themes</h2>
+                    <div class="setting-row">
+                        <span>Color Themes</span>
+                        <div class="colors-container">
+                            <div
+                                class="color-option selected"
+                                style="background-color: #6e045c"
+                                data-color="#4a6fa5"
+                                data-secondary="#166088"
+                                data-accent="#4fc3dc"
+                            ></div>
+                            <div
+                                class="color-option"
+                                style="background-color: #714e5a"
+                                data-color="#6b4e71"
+                                data-secondary="#563d5c"
+                                data-accent="#de54b5"
+                            ></div>
+                            <div
+                                class="color-option"
+                                style="background-color: #2e7d32"
+                                data-color="#2e7d32"
+                                data-secondary="#1b5e20"
+                                data-accent="#81c784"
+                            ></div>
+                            <div
+                                class="color-option"
+                                style="background-color: #d32f2f"
+                                data-color="#d32f2f"
+                                data-secondary="#b71c1c"
+                                data-accent="#ff8a80"
+                            ></div>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="setting-row">
+                        <span>Dark Mode</span>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="dark-mode-toggle" />
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="setting-row">
+                        <span>Animation Speed</span>
+                        <select id="animation-speed">
+                            <option value="0.5s">Fast</option>
+                            <option value="0.3s" selected>Normal</option>
+                            <option value="1s">Slow</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="settings-section">
+                    <h2>Animation Preview</h2>
+                    <div class="setting-row">
+                        <span>Animation Type</span>
+                        <select id="animation-type">
+                            <option value="pulse">Pulse</option>
+                            <option value="rotate">Rotate</option>
+                            <option value="bounce">Bounce</option>
+                        </select>
+                    </div>
+
+                    <div class="preview-box">
+                        <div class="animation-element pulse"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between">
+                <button class="button" id="save-btn">Save Preferences</button>
+                <button
+                    class="button"
+                    id="reset-btn"
+                    style="background-color: #888"
+                >
+                    Reset to Default
+                </button>
+            </div>
+        </div>
+        <div class="toast" id="toast">Settings Saved!</div>
+        <script src="index.js"></script>
+    </body>
+</html>
